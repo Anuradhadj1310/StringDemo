@@ -31,7 +31,8 @@ public class StringReverse {
 		for(int i=0;i<strFName.length();i++)
 		{
 			ch=strFName.charAt(i);
-			fname=ch+fname;
+			fname=ch+fname; 
+			//net disconnected
 			
 		}
 		*/
