@@ -7,24 +7,29 @@ public class StringReverse {
 		String name="Ashish Pohekar";
 		//input : Ashish Pohekar
 		//output must be: shihsA rakehoP
-		String strFName="Is",strLName="Friend";
+		//String strFName="Is",strLName="Friend";
 		String revStr="",fname="";
 		char ch;
 		String splitStr[]=name.split("\\s");
 		
 		System.out.println(splitStr[0]);
 		System.out.println("**********************"+splitStr[1]);
+		System.out.println("**********************"+splitStr.length);
+		//for(int i=0;i<splitStr.length;i++)
+		//{
 		
-		for(int i=0;i<splitStr.length;i++)
-			//for(int i=splitStr.length;i>=0;i--)
-		{
-			for(int j=0;j<splitStr[i].length();j++)
-			{
-				ch=splitStr[i].charAt(j);
-			
-				fname=ch+fname;
+			for(int i=splitStr.length-1;i>=0;i--)
+			{{
+					int len=splitStr[i].length();
+					System.out.println("Length :  "+len+"======"+splitStr[i]);
+				for(int j=0;j<len;j++)
+				{
+					ch=splitStr[i].charAt(j);
+				
+					fname=ch+fname;
+				}
+				fname=" "+fname;
 			}
-			fname=" "+fname;
 		}
 		//String fname,lname;
 		/*
@@ -36,7 +41,7 @@ public class StringReverse {
 			
 		}
 		*/
-		System.out.println("Original :"+strFName+" "+strLName);
+		//System.out.println("Original :"+strFName+" "+strLName);
 		System.out.println("Reveresed: "+fname);
 
 	}
